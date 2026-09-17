@@ -1,0 +1,3 @@
+import { FiShield, FiTruck, FiLock, FiRotateCcw, FiHeadphones } from "react-icons/fi";
+const items=[[FiShield,"100% Genuine Products","Quality you can trust"],[FiTruck,"Fast Delivery","At your doorstep"],[FiLock,"Secure Payments","100% safe & secure"],[FiRotateCcw,"Easy Returns","7 Days hassle-free returns"]];
+export default function BenefitsBar({support=false}){const data=support?[...items,[FiHeadphones,"24/7 Support","We're here to help"]]:items;return <div className="benefits container-fluid">{data.map(([Icon,title,sub])=><div className="benefit" key={title}><Icon/><div><strong>{title}</strong><span>{sub}</span></div></div>)}</div>}
